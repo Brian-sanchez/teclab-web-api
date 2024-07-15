@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../MIPROYECTO/assets/css/estilos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1 class="title-list">Lista de Productos</h1>
+
+    <section class="list-productos">
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Imagen</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Categoría</th>
+            </tr>
+            
+            <?php foreach ($productos as $producto): ?>
+                <tr>
+                    <td><?php echo $producto['id']; ?></td>
+                    <td><?php echo $producto['nombre']; ?></td>
+                    <td>imagen</td>
+                    <td><?php echo $producto['descripcion']; ?></td>
+                    <td><?php echo $producto['precio']; ?></td>
+                    <td><?php echo $producto['categoria']; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </section>
+
+    <br>
+
+    <div class="buttons-section">
+        <button class="btn-agregar">Agregar</button>
+    </div>
+
+    <br>
+
+    <h4 class="nombre-creador">@ 2024 Brian Sanchez, Todos los derechos reservados</h4>
+
+    <script src="../../../MIPROYECTO/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../MIPROYECTO/assets/css/estilos.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Tienclab</title>
+  </head>
+  <body>
+    <nav>
+      <img src="../../../MIPROYECTO/assets/img/tienclab.png" />
+      <div>
+        <a href="http://localhost/MIPROYECTO/index.php">Home</a>
+        <a href="http://localhost/MIPROYECTO/backend/lista_productos.php">Productos</a>
+        <a href="http://localhost/MIPROYECTO/backend/lista_categorias.php">Categorias</a>
+      </div>
+    </nav>
+
+    <h1 class="title-list">Nuestros mejores productos!!</h1>
+
+    <section class="list-productos">
+      <table border="1">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Imagen</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Categoría</th>
+        </tr>
+
+        <?php foreach ($productos as $producto): ?>
+        <tr>
+          <td><?php echo $producto['id']; ?></td>
+          <td><?php echo $producto['nombre']; ?></td>
+          <td> <img class="img-table" src="../../../MIPROYECTO/assets/img/img1.jpg" alt=""/> </td>
+          <td><?php echo $producto['descripcion']; ?></td>
+          <td><?php echo $producto['precio']; ?></td>
+          <td><?php echo $producto['categoria']; ?></td>
+        </tr>
+        <?php endforeach; ?>
+      </table>
+    </section>
+
+    <h4 class="nombre-creador">
+      @ 2024 Brian Sanchez, Todos los derechos reservados
+    </h4>
+
+    <script src="../../assets/js/main.js"></script>
+  </body>
+</html>

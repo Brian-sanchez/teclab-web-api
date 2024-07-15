@@ -1,0 +1,318 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 8 jun. 2024, 21:29:30
+    Author     : Brian Sanchez
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: #1c2841;
+}
+
+form {
+    background-color: azure;
+    margin: auto;
+    border-radius: 2rem;
+    margin-top: 2rem;
+}
+
+.form-productos {
+    width: 50rem;
+    height: 62rem;
+    margin-bottom: 2rem;
+}
+
+.form-categorias {
+    width: 50rem;
+    height: 30rem;
+    margin-top: 10%;
+}
+
+.inputs-section {
+    width: 40rem;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.input-div {
+    position: relative;
+    height: 80px;
+    line-height: 80px;
+    margin-top: 3rem;
+}
+
+.buttons-section {
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    display: flex;
+}
+
+.btn-cancelar {
+    background-color: red;
+    padding: 1.5rem 4rem 1.5rem 4rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 25px;
+}
+
+.btn-guardar {
+    margin-left: 2rem;
+    background-color: green;
+    padding: 1.5rem 4rem 1.5rem 4rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 25px;
+}
+
+.btn-agregar {
+    background-color: rgb(104, 131, 206);
+    padding: 1.5rem 3.7rem 1.5rem 3.7rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 25px;
+}
+
+.btn-cancelar:hover {
+    background-color: rgb(150, 1, 1);
+    transition: 0.3s;
+}
+
+.btn-guardar:hover {
+    background-color: rgb(0, 87, 0);
+    transition: 0.3s;
+}
+
+.btn-agregar:hover {
+    background-color: rgb(86, 109, 172);
+    transition: 0.3s;
+}
+
+.nombre-creador {
+    text-align: center;
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+label {
+    position: absolute;
+    font-size: 1.6em;
+    color: #181b52;
+    padding: 0 25px;
+    margin: 0 20px;
+    background-color: azure;
+    transition: 0.2s ease;
+}
+
+input {
+    position: absolute;
+    width: -webkit-fill-available;
+    outline: none;
+    font-size: 1.6rem;
+    padding: 0 30px;
+    line-height: 80px;
+    border-radius: 10px;
+    border: 2px solid #181b52;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 1111;
+}
+
+input:focus + .labelline,
+input:valid + .labelline {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    transform: translate(-15px, -16px) scale(0.88);
+    z-index: 1111;
+}
+
+.title-form {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.select-form {
+    position: absolute;
+    width: -webkit-fill-available;
+    outline: none;
+    font-size: 1.6rem;
+    padding: 0 30px;
+    line-height: 80px;
+    border-radius: 10px;
+    border: 2px solid #181b52;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 1111;
+    height: 5rem;
+}
+
+.select-form:focus + .labelline,
+.select-form:valid + .labelline {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    transform: translate(-15px, -16px) scale(0.88);
+    z-index: 1111;
+}
+
+.input-file {
+    font-size: 1.5rem;
+}
+
+.input-file + .labelline {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    transform: translate(-15px, -16px) scale(0.88);
+    z-index: 1111;
+}
+
+.textarea-form {
+    position: absolute;
+    width: -webkit-fill-available;
+    outline: none;
+    font-size: 1.6rem;
+    padding: 0 30px;
+    line-height: 80px;
+    border-radius: 10px;
+    border: 2px solid #181b52;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 1111;
+    height: 5rem;
+    resize: none;
+}
+
+.textarea-form:focus + .labelline,
+.textarea-form:valid + .labelline {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    transform: translate(-15px, -16px) scale(0.88);
+    z-index: 1111;
+}
+
+.validation-input {
+    border: 2px solid red;
+}
+
+.validation-label {
+    color: red;
+}
+
+.validation-message {
+    position: absolute;
+    color: red;
+    margin-top: 0.7rem;
+    opacity: 0;
+}
+
+.validation-message-reveal {
+    opacity: 1;
+    transition: 0.4s ease;
+}
+
+.title-list {
+    text-align: center;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.list-categorias {
+    width: 60rem;
+    margin: auto;
+}
+
+.list-productos {
+    width: 90rem;
+    margin: auto;
+}
+
+table {
+    border-radius: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+table td, table th {
+    border: none;
+    text-align: center;
+    padding: 8px;
+    border-radius: 1.5rem;
+}
+
+table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 1rem;
+    border: none;
+}
+
+table thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+}
+
+table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+nav {
+    background-color: rgb(121, 145, 212);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+nav img {
+    width: 14rem;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav a:hover {
+    background-color: rgb(91, 110, 161);
+    color: black;
+}
+
+.img-table {
+    width: 10rem;
+}
